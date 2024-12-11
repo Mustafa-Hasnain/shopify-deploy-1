@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "42bae6f3cc4ea7cb5ceae9c75b9e4025"
-application_url = "https://example.com/"
+application_url = "https://evaluations-billing-convenience-lightweight.trycloudflare.com"
 embedded = true
 name = "Remix-test-2"
 handle = "remix-test-103"
@@ -18,7 +18,15 @@ api_version = "2024-10"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://evaluations-billing-convenience-lightweight.trycloudflare.com/auth/callback",
+  "https://evaluations-billing-convenience-lightweight.trycloudflare.com/auth/shopify/callback",
+  "https://evaluations-billing-convenience-lightweight.trycloudflare.com/api/auth/callback"
+]
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "nowutalk.myshopify.com"
+automatically_update_urls_on_dev = true
